@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css" type="text/css" />
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+      <article>
+        <div id="content_wrap">
+          <div id="title_container">
+              <% if(locals.data.title){ %>
+                <div>
+                    <div>title</div>
+                    <div><%= data.title  %>  </div>
+                </div>
+              <% } %> 
+          </div>
+          <ul id="responseDataInContainer">
+
+              <% if(data.type != null){ %>
+                <li>
+                    <div>type</div>
+                    <div><%- data.type %> </div>
+                </li>
+              <% } %> 
+                       
+                <% if(data.version != null){ %>
+                   <li>
+                       <div>version</div>
+                       <div><%- data.version %> </div>
+                    </li>
+                    <% } %> 
+                       
+                <% if(data.provider_name != null){ %>
+                   <li>
+                       <div>provider_name</div>
+                       <div><%- data.provider_name %></div>
+                    </li>
+                    <% } %> 
+                       
+                <% if(data.provider_url != null){ %>
+                   <li>
+                       <div>provider_url</div>
+                       <div>
+                           <a href="<%- data.provider_name %>"><%- data.provider_name %></a>
+                        </div>
+                    </li>
+                    <% } %> 
+                       
+                <% if(data.author_name != null){ %>
+                    <li>
+                        <div>author_name</div>
+                        <div><%- data.author_name %></div>
+                     </li>
+                    <% } %> 
+                       
+                <% if(data.author_url != null){ %>
+                    <li>
+                        <div>author_url</div>
+                        <div>
+                            <a href="<%- data.author_url %>"><%- data.author_url %></a>
+                         </div>
+                     </li>
+                    <% } %> 
+                    
+                <% if(data.is_plus != null){ %>
+                    <li>
+                        <div>is_plus</div>
+                        <div><%- data.is_plus %></div>
+                     </li>
+                    <% } %> 
+                      
+                <% if(data.html != null){ %>
+                    <li> 
+                        <div>html<br/><%= data.width %>/ <%= data.height %></div>
+                        <div>
+                            <xmp>
+                                <%- data.html %>
+                            </xmp>
+                         <%- data.html %>
+                        </div>
+                    </li>
+                    <% } %> 
+                     
+                <% if(data.width != null){ %>
+                    <li>
+                        <div>width</div>
+                        <div><%- data.width %></div>
+                     </li>
+                    <% } %> 
+                        
+                <% if(data.height != null){ %>
+                    <li>
+                        <div>height</div>
+                        <div><%- data.height %></div>
+                     </li>
+                    <% } %> 
+                     
+                <% if(data.duration != null){ %>
+                    <li>
+                        <div>duration</div>
+                        <div><%- data.duration %></div>
+                     </li>
+                    <% } %> 
+                    
+                <% if(data.description != null){ %>
+                    <li>
+                        <div>description</div>
+                        <div><%- data.description %></div>
+                     </li>
+                    <% } %> 
+                        
+                <% if(data.thumbnail_url != null){ %>
+                    <li>
+                        <div>thumbnail_url<br/><%- data.thumbnail_width %>/<%-data.thumbnail_height %></div>
+                        <div><a href="
+                            <%- data.thumbnail_url %>"><%- data.thumbnail_url %></a><br/><br/><img src="<%- data.thumbnail_url %>"/></div>
+                    </li>
+                    <% } %> 
+                       
+                <% if(data.thumbnail_width != null){ %>
+                    <li>
+                        <div>thumbnail_width</div>
+                        <div><%- data.thumbnail_width %></div>
+                     </li>
+                    <% } %> 
+                     
+                <% if(data.thumbnail_height != null){ %>
+                    <li>
+                        <div>thumbnail_height</div>
+                        <div><%- data.thumbnail_height %></div>
+                     </li>
+                    <% } %> 
+                      
+                <% if(data.thumbnail_url_with_play_button != null){ %>
+                    <li>
+                        <div>thumbnail_url_with_play_button</div>
+                        <div>
+                            <a href="<%-  data.thumbnail_url_with_play_button 
+                        %>"><%-  data.thumbnail_url_with_play_button %></a>
+                        </div>
+                    </li>
+                    <% } %> 
+                       
+                <% if(data.upload_data != null){ %>
+                    <li>
+                        <div>upload_data</div>
+                        <div><%- data.upload_data %></div>
+                     </li>
+                    <% } %> 
+                     
+                <% if(data.video_id != null){ %>
+                    <li>
+                        <div>video_id</div>
+                        <div><%- data.video_id %></div>
+                     </li>
+                    <% } %> 
+                    
+                <% if(data.uri != null){ %>
+                    <li>
+                        <div>uri</div>
+                        <div><%- data.uri %></div>
+                     </li>
+                    <% } %> 
+                        
+                <% if(data.cache_age != null){ %>
+                    <li>
+                        <div>cache_age</div>
+                        <div><%- data.cache_age %></div>
+                     </li>
+                    <% } %> 
+                      
+
+          </ul>
+        </div>
+      </article>
+    </div>
+</body>
+</html>
